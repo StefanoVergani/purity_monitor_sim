@@ -44,3 +44,8 @@ class PuritySimTools:
     def area_radius(radius):
         return (radius**2)*math.pi
 
+    #this function evaluates the conductivity from the electron mobility
+    @staticmethod
+    def e_conductivity(density, mobility):
+        return constant.e*density*mobility
+
