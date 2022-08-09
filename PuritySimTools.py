@@ -17,7 +17,12 @@ class PuritySimTools:
     #this function takes as input a list with the capacities and sums them in series
     @staticmethod
     def C_in_series(input_list):
-        return sum(input_list)/np.prod(np.array(input_list))
+        #return sum(input_list)/np.prod(np.array(input_list))
+        new_list = []
+        for i in range(len(input_list)):
+            new_list.append(pow(input_list[i],-1))
+        sum_new_list = sum(new_list)
+        return pow(sum_new_list,-1)
 
     #this function takes as input a list with the capacities and sums them in parallel
     @staticmethod
